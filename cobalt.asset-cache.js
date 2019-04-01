@@ -1,9 +1,9 @@
 (function(cobalt){
     var plugin = {
-        'name': 'imageCache',
+        'name': 'assetCache',
         init: function (settings) {
             // Create shortcuts
-            cobalt.imageCache={
+            cobalt.assetCache={
                 download: this.download.bind(this),
 				delete: this.delete.bind(this)
             };
