@@ -12,14 +12,11 @@
             cobalt.log(this.name, ' plugin : unknown event received :', json)
         },
 		download: function(params, callback){
-			this.send('download', params, callback)
+			cobalt.plugins.send(this, 'download', params, callback)
 		},
 		delete: function(params, callback){
-			this.send('delete', params, callback)
-		},
-        send:function(action, data, callback){
-            cobalt.send({ type : "plugin", name : this.name, action : action, data : data }, callback);
-        }
+			cobalt.plugins.send(this, 'delete', params, callback)
+		}
     };
     cobalt.plugins.register(plugin);
 })(cobalt || {});
