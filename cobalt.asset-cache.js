@@ -1,15 +1,14 @@
 (function(cobalt){
     var plugin = {
-        'name': 'assetCache',
+        classes: {
+			ios: "AssetCachePlugin",
+            android: "io.kristal.assetcache.AssetCache"
+        },
         init: function () {
-            // Create shortcuts
             cobalt.assetCache={
                 download: this.download.bind(this),
 				delete: this.delete.bind(this)
             };
-        },
-        handleEvent:function(json){
-            cobalt.log(this.name, ' plugin : unknown event received :', json)
         },
 		download: function(params, callback){
 			cobalt.plugins.send(this, 'download', params, callback)
