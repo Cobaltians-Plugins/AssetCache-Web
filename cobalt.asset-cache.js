@@ -1,19 +1,13 @@
 (function(cobalt){
     var plugin = {
         'name': 'assetCache',
-        init: function (settings) {
+        init: function () {
             // Create shortcuts
             cobalt.assetCache={
                 download: this.download.bind(this),
 				delete: this.delete.bind(this)
             };
-
-            if (settings) {
-                this.config(settings);
-            }
         },
-
-        config: function(settings){},
         handleEvent:function(json){
             cobalt.log(this.name, ' plugin : unknown event received :', json)
         },
