@@ -1,5 +1,6 @@
 (function(cobalt) {
   var plugin = {
+    name: 'CobaltAssetCachePlugin',
     classes: {
       ios: "AssetCachePlugin",
       android: "io.kristal.assetcache.AssetCache"
