@@ -26,8 +26,8 @@
       cobalt.plugins.send(this, 'delete', params)
     },
     handleEvent: function(json) {
-      if (json.callback && typeof this.callbacks[json.callback] === 'function') {
-        this.callbacks[json.callback](json.data);
+      if (json.data & json.data.callback && typeof this.callbacks[json.data.callback] === 'function') {
+        this.callbacks[json.data.callback](json.data);
       }
     }
   };
